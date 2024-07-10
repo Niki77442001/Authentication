@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let users = JSON.parse(localStorage.getItem('users')) || [];
     let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
 
-    // Handle sign up
+    //  sign up
     if (signupForm) {
         signupForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Handle login
+    //  login
     if (loginForm) {
         loginForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Handle adding expense
+    //  adding expense
     if (expenseForm) {
         expenseForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             expenseTable.appendChild(row);
         });
 
-        // Add event listeners for edit and delete buttons
+        //  for edit and delete buttons
         document.querySelectorAll('.edit-btn').forEach(button => {
             button.addEventListener('click', handleEdit);
         });
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Handle editing expense
+    //  editing expense
     function handleEdit(e) {
         const id = e.target.dataset.id;
         const expense = expenses.find(expense => expense.id == id);
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
-    // Handle deleting expense
+    // deleting expense
     function handleDelete(e) {
         const id = e.target.dataset.id;
         expenses = expenses.filter(expense => expense.id != id);
