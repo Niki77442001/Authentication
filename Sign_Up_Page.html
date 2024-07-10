@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body style="background-image:url(c.jpg);background-size: cover;">
+    <div class="container mt-5">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+           <a href="Login_Page.html" button type="submit" class="btn btn-primary " onclick="alert()">Sign Up</button></a>
+           <script >
+            function Alert(){
+                alert("Signup sucessful");
+         }
+           </script>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
